@@ -5,6 +5,8 @@
 \usepackage[utf8]{inputenc}
 
 \usepackage{lmodern}
+
+\usepackage{graphicx}
 % Das Paket lmodern erspart die folgenden Warnungen:
 % LaTeX Font Warning: Font shape `OT1/cmss/m/n' in size <4> not available
 % (Font)              size <5> substituted on input line 22.
@@ -13,7 +15,7 @@
  
 % beamer style 
 %\usepackage{beamerthemeshadow}
-\usetheme{Warsaw}  
+\usetheme{Frankfurt}  
 \usecolortheme[named=blue]{structure}
 
 
@@ -161,15 +163,15 @@
 	\end{frame}
 
 
-	\AtBeginSection[]{
-		\begin{frame}
-			\frametitle{Table of Contents}
-			\tableofcontents[currentsection]
-		\end{frame}
-	}
 	
 	\input{definition.tex}
 
+	\AtBeginSection[]{
+		\begin{frame}
+% 			\frametitle{Table of Contents}
+			\tableofcontents[currentsection] 
+		\end{frame}
+	}
 	\input{dbpedia.tex}
 
 	\input{freebase.tex}
