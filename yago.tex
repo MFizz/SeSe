@@ -8,7 +8,7 @@
 \item YAGO (2008) YAGO2s (2012)
 \item developed at Max Planck Institute for Computer Science
 \item more than 10 million entities
-\item more than 120 million facts
+\item more than 447 million facts
 \end{itemize}
 %YAGO in its newest Version YAGO2s is a very big knowledgebase developed at the Max Planck Institute for Computer Science. In 2012, YAGO2s had knowledge of more than 10 million entities and contained more than 120 million facts about these entities.
 \end{frame}
@@ -22,7 +22,7 @@
 \begin{frame}
 \frametitle{Extracts from Wikipedia:}
 \includegraphics[scale=0.25]{img/yago-figure3.png}
-%Now we have already one big knowledge-base which is extractin from Wikipedia, DBpedia, why do we need YAGO. Well, for one YAGO extracts the infoboxes, categories and fulltext, whereas DBPedia only takes the infoboxes.
+%Now we have already one big knowledge-base which is extractin from Wikipedia, DBpedia, why do we need YAGO. Well, for one YAGO extracts the infoboxes, categories and fulltext, whereas DBPedia mainly takes facts from the infoboxes.
 \end{frame}
 
 \begin{frame}[fragile]
@@ -36,10 +36,32 @@ about predefined relations with domain and range:\\
 \end{lstlisting}
 adds temporal and spatial dimension to many entities/relations
 \item DBpedia:\\
-uses words from infoboxes\\
+used to use words from infoboxes\\
 $\rightarrow$ length, length-in-km, length-km
+now uses also predefined relations
 \end{itemize}
-%Then YAGO has about 100 manually predefined relations with domains and ranges, while DBPedia uses the words it finds in the infoboxes. As a drawback the same relation may appear with different names.
+%Then YAGO has about 100 manually predefined relations with domains and ranges, while DBPedia used to use the words it finds in the infoboxes. As a drawback the same relation may appear with different names. In the meantime DBpedia updated its process and uses also predefined relations.
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Relations: Time and Space}
+\begin{itemize}
+\item many facts have a spatial and temporal dimension
+\begin{itemize}
+\item Josef Ackermann is CEO of Deutsche Bank (2006-2012, London)
+\end{itemize}
+\item not covered by rdf and SPARQL
+\item triplets to 5-lets
+\item SPARQL to SPOTL(X)
+\item still RDF
+\end{itemize}
+%Many facts have  also a spatial and temporal domain. For example the fact "Josef Ackermann is CEO of Deutsche" Bank is not valid today, because it also has a time domain. He was in fact CEO of Deustche Bank but only from 2006 to 2012. This kind of additional information can not be stored in traditional RDF that is why RDF facts in Yago also have the information about time and space in form from comments. This way normal rdf reader can still use the facts but more sophisticated extractors can use the additional information.
+\end{frame}
+
+\begin{frame}
+\frametitle{Demo spotlx}
+\includegraphics[scale=0.2]{img/yago-spotnx.png}\\
+https://gate.d5.mpi-inf.mpg.de/webyagospotlx/WebInterface
 \end{frame}
 
 \begin{frame}
@@ -60,7 +82,7 @@ $\rightarrow$ length, length-in-km, length-km
 \begin{tabular}{l|c|r}
 & YAGO & DBpedia\\
 \hline 
-extracts: & title, category, infobox, fulltext & infobox\\
+extracts: & title, category, infobox, fulltext & mainly infobox\\
 relations: & predefined (domain, range) & taken from infobox\\
 precision: & very good & not that good \\
 costs: & very high & not that high
@@ -98,7 +120,22 @@ https://gate.d5.mpi-inf.mpg.de/webyagospotlx/Browser
 \end{frame}
 
 \begin{frame}
-\frametitle{Demo spotlx}
-\includegraphics[scale=0.2]{img/yago-spotnx.png}\\
-https://gate.d5.mpi-inf.mpg.de/webyagospotlx/WebInterface
+\frametitle{When to use YAGO}
+\begin{itemize}
+\item main goal\\
+near human-accuracy
+\item advantages
+\begin{itemize}
+\item accuracy
+\item coverage by GeoNames and WordNet
+\item additional spatial and time domain \\
+space: 30 million, time 17 million
+\end{itemize}
+\item disadvatages
+\begin{itemize}
+\item hard to maintain/ not that up-to-date
+\item not many and unreliable SPARQL/ SPOTL(x) endpoints
+\end{itemize}
+\end{itemize}
 \end{frame}
+

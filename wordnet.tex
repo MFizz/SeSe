@@ -7,18 +7,21 @@
 \item lexical database for English language
 \item covers most English nouns, verbs, adjectives, adverbs
 \item used in many applications (retrieval, translation)
+\item two kinds of semantic relations
 \end{itemize}
+% which means it labels concepts to words
 \end{frame}
 
 \begin{frame}
 \begin{itemize}
-\frametitle{Synsets}
+\frametitle{Synsets - Lexical (word-word) relation}
 \item words are grouped into synonym sets - synsets
 \item sysnsets are the basic unit of meaning
 \item 120,000 synsets
 \item Synonym, Antonymy, Gradation
 \end{itemize}
 \includegraphics[scale=0.55]{img/wordnet-syn.png}
+% Gradation in this context means it's related to all comparative words, for example wet, wetter, the wettest
 \end{frame}
 
 \begin{frame}
@@ -34,7 +37,7 @@
 \begin{frame}
 \begin{minipage}{0.40\textwidth}
 \begin{itemize}
-\frametitle{Linking between Synsets}
+\frametitle{Linking between Synsets - Conceptual (concept-concept) relation}
 \item Synsets are linked by
 \begin{itemize}
 \item Hypernymy / Hyponymy
@@ -47,6 +50,59 @@
 \begin{minipage}{0.5\textwidth}
 \includegraphics[scale=0.33]{img/wordnet_hyponym.png}
 \end{minipage}
+\end{frame}
+
+\begin{frame}
+\frametitle{Hypernym / Hyponym}
+\begin{minipage}{0.5\textwidth}
+\begin{itemize}
+\item A truck (Hyponym) is a kind of car (Hypernym)
+\item denotes more or less general concepts
+\item transitive
+\item experiments indicate knowledge about concepts is stored at superordinate (Hypernym) nodes and inherited downward
+\end{itemize}
+\end{minipage}
+\begin{minipage}{0.4\textwidth}
+\includegraphics[scale=0.33]{img/wordnet_hyp.png}
+\end{minipage}
+% This relation is transitive so if for example a car is a kind of vehicle then a truck is also a kind of vehicle. Reaction time word association experiments with humans suggest that knowledge is stored in the brain at superordinate nodes and inherited downward. 
+\end{frame}
+
+\begin{frame}
+\frametitle{Meronym / Holonym (part/whole)}
+\begin{minipage}{0.5\textwidth}
+\begin{itemize}
+\item The engine (Hyponym) is a part of a car (Hypernym)
+\item denotes more or less general concepts
+\item inheritance
+\item 3 kinds of meronomy
+\begin{itemize}
+\item proper parts
+\item substance
+\item groups/members
+\end{itemize}
+\end{itemize}
+\end{minipage}
+\begin{minipage}{0.4\textwidth}
+\includegraphics[scale=0.33]{img/wordnet_mer.png}
+\end{minipage}
+% An example for the inheritance would be that is an engine has spark plugs and an enginge is part of a car, then a car also has spark plugs. 
+% WordNet distinguishes between 3 different kinds of Meronomy. First there are proper parts, which are seperable, like in the example: car - engine, or motor engine. Then there is are substances such as oxygen which is a part of air and water and members of groups like professor and faculty.
+\end{frame}
+
+\begin{frame}
+\frametitle{Semantic Relations between Verbs}
+\begin{itemize}
+\item apart from Homonyms
+\begin{itemize}
+\item Troponym:\\
+the verb Y is a troponym of the verb X if the activity Y is doing X in some manner (lisp- talk)
+\item Entailment:\\
+the verb Y is entailed by X if by doing X you must be doing Y (sleep - snore)
+\end{itemize}
+\end{itemize}
+%the verb Y is a troponym of the verb X if the activity Y is doing X in some manner (to lisp is a troponym of to talk)
+%the verb Y is entailed by X if by doing X you must be doing Y (to sleep is entailed by to snore)
 \end{frame}
 
 \begin{frame}
