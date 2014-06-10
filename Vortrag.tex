@@ -190,15 +190,26 @@
 	\begin{tabular}{|l|l|l|}
 	\hline
 	 & DBpedia & Freebase\\
-	 sources & only Wikipedia & Wikipedia, Netflix, user input\\
-	 use cases & \parbox[t]{4cm}{semantic mirror for Wikipedia; categorization;
-	 ``nucleus of the semantic web''} & \parbox[t]{4cm}{build own schema} \\
-	   $+$ & \parbox[t]{4cm}{has many outgoing
-	 links;
-	 good categorization} & \parbox[t]{4cm}{many sources; possibly more
-	 information}\\
-	 $-$ & limited information & \parbox[t]{4cm}{might seem a bit unstructured at
-	 times; no SPARQL endpoint} \\ 
+	 Sources & only Wikipedia & Wikipedia, Netflix, user input\\
+	 $+$ & \parbox[t]{4cm}{has many outgoing links\\ good categorization} & 
+	 \parbox[t]{5cm}{many sources\\possibly more information}\\
+	 $-$ & limited information & \parbox[t]{5cm}{might seem a bit\\unstructured at
+	 times \\ no SPARQL endpoint} \\
+	\hline
+	\end{tabular}
+	\end{table}
+	\end{frame}
+	
+	\begin{frame}
+	\frametitle{comparison}
+	\begin{table}
+	\begin{tabular}{|l|l|l|}
+	\hline
+	 & WordNet & YAGO\\
+	 Sources & manual & Wikipedia, GeoNames, WordNet, Universal WordNet\\
+	 $+$ & \parbox[t]{4cm}{good for word sense\\ disambiguation\\ really big} & 
+	 \parbox[t]{5cm}{additional spatial and temporal information\\ many sources\\very precise}\\
+	 $-$ & \parbox[t]{5cm}{too fine-grained\\ no domain-specific vocabulary} & \parbox[t]{5cm}{not that up-to-date \\ no good SPARQL endpoint} \\
 	\hline
 	\end{tabular}
 	\end{table}
