@@ -176,7 +176,7 @@
 		\end{frame}
 	}
 	\input{dbpedia.tex}
-
+ 
 	\input{freebase.tex}
 
 	\input{yago.tex}
@@ -184,7 +184,21 @@
 	\input{wordnet.tex}
 	
 	
-	
+	\begin{frame}
+	\frametitle{comparison}
+	\begin{table}
+	\begin{tabular}{|l|l|l|}
+	\hline
+	 & DBpedia & Freebase\\
+	 Sources & only Wikipedia & Wikipedia, Netflix, user input\\
+	 $+$ & \parbox[t]{4cm}{has many outgoing links\\ good categorization} & 
+	 \parbox[t]{5cm}{many sources\\possibly more information}\\
+	 $-$ & limited information & \parbox[t]{5cm}{might seem a bit\\unstructured at
+	 times \\ no SPARQL endpoint} \\
+	\hline
+	\end{tabular}
+	\end{table}
+	\end{frame}
 	
 	
 \end{document}
