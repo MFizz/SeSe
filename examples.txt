@@ -1,0 +1,63 @@
+SNORQL
+
+
+PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?birth ?death ?person WHERE {
+     ?person dbo:birthPlace :Berlin .
+     ?person dbo:birthDate ?birth .
+     ?person foaf:name ?name .
+     ?person dbo:deathDate ?death .
+     FILTER (?birth < "1900-01-01"^^xsd:date) .
+}
+ORDER BY ?birth
+
+
+
+
+DBspotlight
+
+
+Pakistan's largest airport has resumed operations after an assault by militants which left at least 28 people, including the attackers, dead.
+
+The assault on Jinnah international airport in Karachi began late on Sunday, with security forces gaining control in the early hours of Monday.
+
+The Pakistani Taliban have said they carried out the raid as revenge for the killing of their leader last year.
+
+A government spokesman said a full investigation was under way.
+
+Asif Kirmani, a political secretary to Prime Minister Nawaz Sharif, also praised the security forces for their response.
+
+
+Freebase MQL Query
+
+{
+  "query": {
+    "type":"/music/artist",
+    "name":"The Police",
+    "album":[]
+  }
+}
+
+
+{
+  "type":"/music/artist",
+  "name":"The Police",
+  "album":[],
+  "album!=":"Greatest Hits"
+}
+
+
+{
+  "name":null,
+  "type":"/music/artist",
+  "and:type":"/people/person",
+  "album~=":"Christmas"
+}
+
+
+{
+  "return":"count",
+  "type":"/music/album",
+  "artist":"The Police"
+}
