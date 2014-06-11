@@ -10,7 +10,7 @@
 \item more than 10 million entities
 \item more than 447 million facts
 \end{itemize}
-%YAGO in its newest Version YAGO2s is a very big knowledgebase developed at the Max Planck Institute for Computer Science. In 2012, YAGO2s had knowledge of more than 10 million entities and contained more than 120 million facts about these entities.
+%Yago is our first big knowledge base, it exists since 2008. YAGO in its newest Version YAGO2s is a very big knowledgebase developed at the Max Planck Institute for Computer Science. In 2012, YAGO2s had knowledge of more than 10 million entities and contained more than 120 million facts about these entities.
 \end{frame}
 
 \begin{frame}
@@ -34,7 +34,6 @@ about predefined relations with domain and range:\\
 :hasSon rdfs:domain :Person;
             rdfs:range  :Man.
 \end{lstlisting}
-adds temporal and spatial dimension to many entities/relations
 \item DBpedia:\\
 used to use words from infoboxes\\
 $\rightarrow$ length, length-in-km, length-km
@@ -69,26 +68,12 @@ https://gate.d5.mpi-inf.mpg.de/webyagospotlx/WebInterface
 \begin{itemize}
 \item YAGO:
 \begin{itemize}
-\item manually evaluated that 95% triplets are correct
+\item manually evaluated that 95\% triplets are correct
 \item extractions process lasts 3 days
 \item over 12 researcher
 \end{itemize}
 \end{itemize}
 %All this make YAGO a very precise database. A manual evaluation confirmed that 95\% of the triplets extracted by YAGO are correct. But this comes at the price of speed and maintenance. Because YAGO draws from few but very different sources, the extraction, reconciliation, deduplication, verification of constraints, etc. takes several days to run. Plus more than a dozen researches, who need to work directly or indirectly on YAGO.\\
-\end{frame}
-
-\begin{frame}
-\frametitle{Why YAGO?}
-\begin{tabular}{l|c|r}
-& YAGO & DBpedia\\
-\hline 
-extracts: & title, category, infobox, fulltext & mainly infobox\\
-relations: & predefined (domain, range) & taken from infobox\\
-precision: & very good & not that good \\
-costs: & very high & not that high
-
-% Here we see again a direct comparision between YAGO and DBpedia
-\end{tabular}
 \end{frame}
 
 \begin{frame}
